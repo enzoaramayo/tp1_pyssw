@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="css/formulario.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <header class="cabecera">
+
+            <form action="no-idea" method="post" action="https://facultad-de-ingieria.com/send.php">
+                <fieldset>
+                    <legend>
+                        <h1>Miembro Registro</h1>
+                    </legend>
+                    <div>
+                        <label for="id-ingreso">ID de ingreso: </label>
+                        <input class="entrada" type="text" id="id-ingreso">
+                    </div>
+
+                    <div>
+                        <label for="contraseña">Contraseña: </label>
+                        <input class="entrada" type="password" id="contraseña">
+                    </div>
+
+                    <div>
+                        <label for="contraseña">Repita la Contraseña: </label>
+                        <input class="entrada" type="password" id="contraseña">
+                    </div>
+
+                    <div>
+                        <label for="email">E-mail: </label>
+                        <input class="entrada" type="text" id="email">
+                    </div>
+
+                    <div>
+                        <label for="email">Repita E-mail: </label>
+                        <input class="entrada" type="text" id="email">
+                    </div>
+
+                    <div>
+                        <label for="lista-mail">Lista de Mail: </label>
+                        <input type="radio" name="lista-email" value="Si" required="required" />Si
+                        <input type="radio" name="lista-email" value="No" required="required" />No
+                    </div>
+
+                    <div>
+                        <label for="nombre">Nombre: </label>
+                        <input class="entrada" type="text" id="nombre">
+                    </div>
+
+                    <div>
+                        <label for="genero">Genero: </label>
+                        <input type="radio" name="genero" value="Masculino" required="required" />Masculino
+                        <input type="radio" name="genero" value="Femenino" required="required" />Femenino
+
+                    </div>
+                    <!-- Fecha de nacimiento type="date" -->
+                    <div>
+                        <label for="fecha-nacimiento">Fecha de Nacimiento: </label>
+                        <input type="date" name="" id="fecha_nacimiento">
+                    </div>
+                    <!--Lista desplegable de paises-->
+                    <div>
+                        <label for="nacionalidad">Pais: </label>
+                        <select name="nacionalidad">
+                            <option value="0">-----------</option>
+                            <option value="1">Argentina</option>
+                            <option value="2">Bolivia</option>
+                            <option value="3">Brasil</option>
+                            <option value="3">Chile</option>
+                            <option value="4">Paraguay</option>
+                            <option value="5">Uruguay</option>
+                        </select>
+                    </div>
+                    <!-- Botones: Enviar, Cancelar-->
+                    <a href="error.html"><input class="boton" type="button" value="Enviar"></a>
+                    <input class="boton" type="reset" value="Cancelar"></p>
+
+                </fieldset>
+
+            </form>
+        </header>
+    </div>
+
+</body>
+
+</html>
