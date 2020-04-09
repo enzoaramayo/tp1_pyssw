@@ -1,107 +1,74 @@
 * {
     margin: 0;
     padding: 0;
-    text-decoration: none;
 }
 
+/* Estilos para el body */
+/* Es el tamaño que va a tener */
 body {
-    margin: 0 auto;
-    width: 60%;
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
+/*Estilos para el slider, lista de imagenes */
 .slider {
+    width: 60%;
+    margin: auto;
+
+    /* Con esto se ocultan las imagenes que estan fuera del slider */
     overflow: hidden;
-    height: 400px;
 }
 
-.slider figure div {
-    float: left;
-    width: 20%;
+/* Con esto se quita el padding por defecto de una lista desordenada */
+.slider ul {
+    padding: 0;
+    /* Con display flex se colocaran las imagenes una al lado de la otra */
+    display: flex;
+    /* Con width 400% se indica que va a ocupar un 400% de pantalla, porque al ser 4 imagenes esto es correcto */
+    width: 400%;
+
+    /* Con esto especificamos que la animacion durara 20s y se repetira infinitamente */
+    animation: cambio 20s infinite;
+
+    /* Y esto es para que al final de la animacion no pase a la primer imagen sino vuelva a la 3, 2, 1 y de la 1 a la 2, 3 , 4  y asi */
+    animation-direction: alternate;
+    
+
 }
 
-.slider figure {
-    position: relative;
-    width: 500%;
-    margin: 0px;
-    left: 0;
-    animation: 20s sli infinite;
+.slider img {
+    width: 100%;
 }
 
+/* Con esto se quita los puntos que vienen en cada item de la lista desordenada */
+.slider li {
+    list-style: none;
+}
+
+
+
+
+/* Estilos para la leyenda al final de la página */
 #leyenda-empresa {
     text-align: center;
 }
 
-@keyframes sli {
-    0% {
-        left: 0;
-    }
+/* Aca vamos a darle vida a nuestra animacíon */
+@keyframes cambio {
+/*Recuerdo que le di un 400% de ancho a la imagen */
 
-    10% {
-        left: 0%;
-    }
+    0% { margin-left: 0% ;} /* al 0% o 0 segundos de los 20s de cambio */
+    20% { margin-left: 0% ; }/* Con esto l primer imagen durara 4 segundos*/
 
-    12% {
-        left: -100%;
-    }
+    25% { margin-left: -100% ;} /* Con este se genera el desplazamiento de la primer imagen a la segunda */ 
+    45% { margin-left: -100% ;}
 
-    22% {
-        left: -100%;
-    }
 
-    24% {
-        left: -200%;
-    }
+    50% { margin-left: -200% ;} /* Con este se genera el desplazamiento de la imagen 2 a la 3 */ 
+    70% { margin-left: -200% ;}
 
-    34% {
-        left: -200%;
-    }
-
-    36% {
-        left: -300%;
-    }
-
-    46% {
-        left: -300%;
-    }
-
-    46% {
-        left: -300%;
-    }
-
-    48% {
-        left: -400%;
-    }
-
-    58% {
-        left: -400%;
-    }
-
-    60% {
-        left: -300%;
-    }
-
-    70% {
-        left: -300%;
-    }
-
-    72% {
-        left: -200%;
-    }
-
-    82% {
-        left: -200%;
-    }
-
-    84% {
-        left: -100%;
-    }
-
-    94% {
-        left: -100%;
-    }
-
-    96% {
-        left: 0%;
-    }
+    75% { margin-left: -300% ;} /* Con este se genera el desplazamiento de la imagen 3 a la 4 */ 
+    100% { margin-left: -300% ;}
 
 }
