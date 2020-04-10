@@ -7,7 +7,7 @@ body {
     background: rgba(236, 235, 238, 0.74);
 }
 
-#contenedor {
+.container {
     width: 1200px;
     background: white;
     margin-left: auto;
@@ -204,4 +204,104 @@ footer div:hover {
     font-weight: normal;
     color: #666;
     padding: 8px 0 0 0;
+}
+
+
+/* FORMULARIO */
+
+/* Un formulario simple */
+.form-group div {
+    margin: 4px;
+}
+
+.form-group div label {
+    width: 145px;
+    float: left;
+    background: rgba(236, 235, 235, 0.884);
+    padding: 2px;
+    border-radius: 3px;
+}
+
+fieldset {
+    width: 340px;
+    height: 300px;
+}
+
+.entrada {
+    border-radius: 3px;
+    color: solid;
+}
+
+/* Esto es para el degradado de botones */
+.boton {
+    background: -webkit-linear-gradient(gray, white);
+    background: -moz-linear-gradient(gray, white);
+    background: -o-linear-gradient(gray, white);
+}
+
+
+
+/* SLIDER */
+
+
+/*Estilos para el slider, lista de imagenes */
+.slider {
+    width: 58%;
+    margin: auto;
+
+    /* Con esto se ocultan las imagenes que estan fuera del slider */
+    overflow: hidden;
+}
+
+/* Con esto se quita el padding por defecto de una lista desordenada */
+.slider ul {
+    padding: 0;
+    /* Con display flex se colocaran las imagenes una al lado de la otra */
+    display: flex;
+    /* Con width 400% se indica que va a ocupar un 400% de pantalla, porque al ser 4 imagenes esto es correcto */
+    width: 400%;
+
+    /* Con esto especificamos que la animacion durara 20s y se repetira infinitamente */
+    animation: cambio 20s infinite;
+
+    /* Y esto es para que al final de la animacion no pase a la primer imagen sino vuelva a la 3, 2, 1 y de la 1 a la 2, 3 , 4  y asi */
+    animation-direction: alternate;
+    
+
+}
+
+.slider img {
+    width: 100%;
+}
+
+/* Con esto se quita los puntos que vienen en cada item de la lista desordenada */
+.slider li {
+    list-style: none;
+}
+
+
+
+
+/* Estilos para la leyenda al final de la página */
+#leyenda-empresa {
+    text-align: center;
+}
+
+/* Aca vamos a darle vida a nuestra animacíon */
+@keyframes cambio {
+/*Recuerdo que le di un 400% de ancho a la imagen */
+
+    0% { margin-left: 0% ;} /* al 0% o 0 segundos de los 20s de cambio */
+    20% { margin-left: 0% ; }/* Con esto l primer imagen durara 4 segundos*/
+
+    25% { margin-left: -100% ;} /* Con este se genera el desplazamiento de la primer imagen a la segunda */ 
+    45% { margin-left: -100% ;}
+
+
+    50% { margin-left: -200% ;} /* Con este se genera el desplazamiento de la imagen 2 a la 3 */ 
+    70% { margin-left: -200% ;}
+
+    75% { margin-left: -300% ;} /* Con este se genera el desplazamiento de la imagen 3 a la 4 */ 
+    100% { margin-left: -300% ;}
+
 }
